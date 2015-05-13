@@ -1,4 +1,4 @@
-require 'twilio'
+require 'twilio-ruby'
 
 class TwilioController < ApplicationController
   include Webhookable
