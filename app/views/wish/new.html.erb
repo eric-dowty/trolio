@@ -1,15 +1,22 @@
-<% flash.each do |type, message| %>
-  <%= message %>
-<% end %>
+<div class="container">
+  <div class="row ">
+      <div class="col-xs-12 col-center-stuff">
+      <% flash.each do |type, message| %>
+        <%= message %>
+      <% end %>
 
-<h1>Trolio</h1>
-
-<%= form_for(:wish, url: :wish) do |f| %>
-  <%= f.text_field :message, value: "wish you were here!" %>
-  <%= f.text_field :number, placeholder: 'enter number here' %>
-  <br><em>Enter a url below or use this trolio!</em>
-  <br><%= image_tag(@url)  %>
-  <%= f.hidden_field :url, value: @url %>
-  <br><%= f.text_field :pic, placeholder: 'picture url' %>
-  <%= f.submit 'Go Troll' %>
-<% end %>
+      <h1>Trolio</h1>
+      <%= form_for(:wish, url: :wish) do |f| %>
+        <p><em>Enter a message or use:</em><p>
+        <p><%= f.text_field :message, value: "wish you were here!" %></p>
+        <p><em>Enter a url below or use this picture:</em><p>
+          <%= f.hidden_field :url, value: @url %>
+        <p><%= f.text_field :pic, placeholder: 'picture url' %><p>
+        <p><%= image_tag(@url)  %><p>
+          <p id= "number"><em>Enter a phone number (starting with 1):</em><p>
+          <p><%= f.text_field :number, placeholder: 'enter number here' %></p>
+        <p><%= f.submit 'Go Trollin!', class: 'btn btn-danger' %><p>
+      <% end %>
+    </div>
+</div>
+</div>

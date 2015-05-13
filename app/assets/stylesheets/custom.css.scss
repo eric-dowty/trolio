@@ -1,0 +1,43 @@
+body {
+  padding-top: 0px;
+  background: image-url("background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: monospace;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body img {
+  width: 275px;
+}
+
+.col-center-stuff {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#number{
+  color:white;
+}
+
+h1 {
+  font-family: 'Arvo', cursive !important;
+  color: black;
+  font-size: 250%;
+}
+
+#wrap {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.image1{
+  max-height: 150px;
+  max-width: 200px;
+  width: 120px;
+  height: 120px;
+}
