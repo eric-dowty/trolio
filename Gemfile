@@ -6,7 +6,7 @@ gem 'pg'
 gem 'bcrypt'
 gem 'unicorn'
 gem 'twilio-ruby'
-gem 'turbolinks'
+# gem 'turbolinks'
 gem 'jquery-rails'
 gem 'rails', '4.2.1'
 gem 'bootstrap-sass'
@@ -26,4 +26,8 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
