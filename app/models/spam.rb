@@ -3,9 +3,9 @@ require 'twilio-ruby'
 
 class Spam
 
-  def generate(number = 15702944707, pic, message) 
+  def generate(number = 15702944707, pic, message, url) 
     if pic == ""
-      pic = "http://guestofaguest.com/wp-content/uploads/2011/09/rickross4.jpg"
+      pic = url
     end
 
     account_sid = ENV["twilio_sid"]
