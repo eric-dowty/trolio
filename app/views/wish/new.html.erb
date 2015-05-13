@@ -5,14 +5,14 @@
         <%= message %>
       <% end %>
 
-
       <h1>Trolio</h1>
       <%= form_for(:wish, url: :wish) do |f| %>
         <p><em>Enter a message or use:</em><p>
         <p><%= f.text_field :message, value: "wish you were here!" %></p>
         <p><em>Enter a url below or use this picture:</em><p>
+          <%= f.hidden_field :url, value: @url %>
         <p><%= f.text_field :pic, placeholder: 'picture url' %><p>
-        <p><%= image_tag('http://guestofaguest.com/wp-content/uploads/2011/09/rickross4.jpg')  %><p>
+        <p><%= image_tag(@url)  %><p>
           <p id= "number"><em>Enter a phone number (starting with 1):</em><p>
           <p><%= f.text_field :number, placeholder: 'enter number here' %></p>
         <p><%= f.submit 'Go Trollin!', class: 'btn btn-danger' %><p>
